@@ -6,6 +6,12 @@ terraform {
     }
   }
 }
+ 
+# Configure the AWS Provider
+provider "aws" {
+  region = "us-east-1"
+  # VERSION IS NOT NEEDED HERE
+}
 
 resource "aws_default_vpc" "default" {
 
