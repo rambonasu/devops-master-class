@@ -1,9 +1,16 @@
-provider "aws" {
-  region = "eu-central-1"
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+  }
 }
+ 
+# Configure the AWS Provider
 provider "aws" {
-  alias = "useast"
   region = "us-east-1"
+  # VERSION IS NOT NEEDED HERE
 }
 resource "aws_default_vpc" "default" {
 
