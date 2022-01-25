@@ -1,8 +1,17 @@
-provider "aws" {}
+provider "aws" {
+  region = "eu-central-1"
+}
 provider "aws" {
   alias = "useast"
+  region = "us-east-1"
 }
-
+module "submodule" {
+  source = "./submodule"
+  providers = {
+    aws = aws
+    aws.useast = aws.useast
+  }
+}
 resource "aws_default_vpc" "default" {
 
 }
