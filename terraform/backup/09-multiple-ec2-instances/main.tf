@@ -1,6 +1,6 @@
+provider "aws" {}
 provider "aws" {
-  region = "us-west-2"
-  alias  = "env"
+  alias = "useast"
 }
 
 resource "aws_default_vpc" "default" {
