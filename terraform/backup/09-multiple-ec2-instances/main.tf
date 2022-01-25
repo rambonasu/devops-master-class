@@ -9,7 +9,7 @@ terraform {
  
 # Configure the AWS Provider
 provider "aws" {
-  region = local.region
+  region = var.region
   # VERSION IS NOT NEEDED HERE
 }
 
