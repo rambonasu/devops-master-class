@@ -3,9 +3,6 @@ provider "aws" {
   alias  = "env"
 }
 
-  required_version = ">= 0.14.9"
-}
-
 resource "aws_default_vpc" "default" {
 
 }
